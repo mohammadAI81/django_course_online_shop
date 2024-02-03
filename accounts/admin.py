@@ -2,13 +2,14 @@ from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
 from .models import CustomUser
-from .form import CustomeUserChangeForm, CustomeUserCreationForm
+from .form import CustomUserChangeForm, CustomUserCreationForm
+
 
 @admin.register(CustomUser)
-class CustomeUserAdmin(UserAdmin):
+class CustomUserAdmin(UserAdmin):
     model = CustomUser
-    form = CustomeUserChangeForm
-    add_form = CustomeUserCreationForm
+    form = CustomUserChangeForm
+    add_form = CustomUserCreationForm
     list_display = ('username', 'email')
 
 
