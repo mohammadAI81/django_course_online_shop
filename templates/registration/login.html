@@ -1,7 +1,11 @@
-<h1>Lon In</h1>
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
-<form action="" method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Log in">
-</form>
+{% block content %}
+    <h1>Lon In</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Log in" class="btn btn-success">
+    </form>
+{% endblock %}
