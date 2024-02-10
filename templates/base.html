@@ -11,6 +11,11 @@
     </head>
     <body>
         <div class="container">
+        {% if user.is_authenticated %}
+            <a href="{% url 'account_logout' %}"> Log Out </a> | Wellcome {{ user.email }}
+        {% else %}
+            <a href="{% url 'account_login' %}"> login </a> | <a href="{% url 'account_signup' %}"> sign up </a>
+        {% endif %}
             {% block content %}
 
             {% endblock %}
