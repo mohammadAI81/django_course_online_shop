@@ -2,10 +2,13 @@
 {% load crispy_forms_tags %}
 
 {% block content %}
-    <h1>Lon In</h1>
-    <form action="" method="POST">
-        {% csrf_token %}
-        {{ form|crispy }}
-        <input type="submit" value="Log in" class="btn btn-success">
-    </form>
+    <div class="container">
+
+        <h1>Lon In</h1>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Log in" class="btn btn-success">
+        </form>
+    </div>
 {% endblock %}
