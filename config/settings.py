@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'crispy_bootstrap5',
     'allauth',
     'allauth.account',
+    'rosetta',
     
     
     'accounts.apps.AccountsConfig',
@@ -143,6 +144,11 @@ EMAIL_USE_TLS = True
 # LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'fa'
 
+LANGUAGES = (
+    ('en', 'English'),
+    ('fa', 'Persian'),
+)
+
 # TIME_ZONE = 'UTC'
 TIME_ZONE = 'Asia/Tehran'
 
@@ -182,3 +188,9 @@ ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 
 # crispy form
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+# For messages framework
+from django.contrib.messages import constants
+MESSAGE_TAGS = {
+    constants.ERROR: 'danger',
+}
