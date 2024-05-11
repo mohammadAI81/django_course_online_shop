@@ -85,6 +85,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # Custom Context Processors
+                'cart.context_processors.cart',
             ],
         },
     },
@@ -186,6 +188,10 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 
+# Rosetta
+LOCALE_PATHS = [
+    str(BASE_DIR.joinpath('templates', 'locale')),
+]
 
 # crispy form
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
