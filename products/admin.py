@@ -2,12 +2,23 @@ from django.contrib import admin
 
 from .models import Product, Comment
 
+from jalali_date.admin import ModelAdminJalaliMixin
+
+
+class CommentInLine(admin.TabularInline):
+    model = Comment
+    fields = ['author', 'body', 'stars']
+    extra = 1
+
 
 @admin.register(Product)
-class AdminProduct(admin.ModelAdmin):
+class AdminProduct(ModelAdminJalaliMixin, admin.ModelAdmin):
     list_display = ('title', 'price', 'active')
     ordering = ('-datetime_created', )
     list_editable = ('active',)
+    inlines = [
+        CommentInLine,
+    ]
 
 
 @admin.register(Comment)
