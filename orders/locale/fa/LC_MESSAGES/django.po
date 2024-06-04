@@ -1,0 +1,80 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-04 00:26+0330\n"
+"PO-Revision-Date: 2024-06-04 00:28+0330\n"
+"Last-Translator: محمد محمدی <mohammad@ml.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+#: .\models.py:7
+msgid "User"
+msgstr "کاربر"
+
+#: .\models.py:8
+msgid "Is paid"
+msgstr "پرداخت شده"
+
+#: .\models.py:10
+msgid "First Name"
+msgstr "نام"
+
+#: .\models.py:11
+msgid "Last Name"
+msgstr "نام خانوادگی"
+
+#: .\models.py:12
+msgid "Phone Number"
+msgstr "شماره موبایل"
+
+#: .\models.py:13
+msgid "Address"
+msgstr "آدرس کامل"
+
+#: .\models.py:15
+msgid "Order Notes"
+msgstr "یادداشت سفارش"
+
+#: .\models.py:17
+msgid "Datetime Created"
+msgstr "تاریخ ایجاد شده"
+
+#: .\models.py:18
+msgid "Datetime Modified"
+msgstr "تاریخ ویرایش"
+
+#: .\models.py:28
+msgid "Price"
+msgstr "قیمت"
+
+#: .\templates\orders\orders_create.html:7
+msgid "Order page"
+msgstr "ثبت سفارش"
+
+#: .\templates\orders\orders_create.html:68
+msgid "Send"
+msgstr "ارسال"
+
+#: .\templates\orders\orders_create.html:94
+#: .\templates\orders\orders_create.html:102
+msgid "$"
+msgstr "تومان"
+
+#: .\views.py:18
+msgid "You can't go because your cart empty"
+msgstr "شما نمی توانید زیرا سبد خرید شما خالی است."
+
+#: .\views.py:28
+msgid "your Order Submit Successfully"
+msgstr "سبد خرید شما با موفقیت ثبت شد."

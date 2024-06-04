@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rosetta',
+    'ckeditor',
     
     
     'accounts.apps.AccountsConfig',
@@ -57,7 +58,8 @@ INSTALLED_APPS = [
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
     'persian_translate.apps.PersianTranslateConfig',
-    'ckeditor',
+    'orders.apps.OrdersConfig',
+
 
 ]
 
