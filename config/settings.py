@@ -52,13 +52,14 @@ INSTALLED_APPS = [
     'rosetta',
     'ckeditor',
     
-    
+
     'accounts.apps.AccountsConfig',
     'pages.apps.PagesConfig',
     'products.apps.ProductsConfig',
     'cart.apps.CartConfig',
     'persian_translate.apps.PersianTranslateConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 
 
 ]
@@ -212,3 +213,5 @@ from django.contrib.messages import constants
 MESSAGE_TAGS = {
     constants.ERROR: 'danger',
 }
+
+ZARINPAL_URL = env('DJANGO_ZARINPAL')
