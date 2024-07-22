@@ -14,6 +14,11 @@ class Order(models.Model):
 
     order_notes = models.CharField(_('Order Notes'), max_length=700, blank=True)
 
+    # Zarin Pal Data
+    authority = models.CharField(max_length=255, blank=True)
+    ref_id = models.CharField(max_length=150, blank=True)
+    zarinpal_data = models.TextField(blank=True)
+
     datetime_created = models.DateTimeField(verbose_name=_('Datetime Created'), auto_now_add=True)
     datetime_modified = models.DateTimeField(verbose_name=_('Datetime Modified'), auto_now=True)
 

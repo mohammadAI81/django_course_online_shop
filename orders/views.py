@@ -27,22 +27,22 @@ def order_create_view(request):
 
             messages.success(request, _('your Order Submit Successfully'))
 
-        for item in cart:
-            product = item['product_obj']
-            OrderItem.objects.create(
-                order=order_obj,
-                product=product,
-                quantity=item['quantity'],
-                price=product.price,
-            )
-        cart.clean()
+            for item in cart:
+                product = item['product_obj']
+                OrderItem.objects.create(
+                    order=order_obj,
+                    product=product,
+                    quantity=item['quantity'],
+                    price=product.price,
+                )
+            cart.clean()
 
-        request.user.first_name = order_obj.first_name
-        request.user.last_name = order_obj.last_name
-        request.user.save()
+            request.user.first_name = order_obj.first_name
+            request.user.last_name = order_obj.last_name
+            request.user.save()
 
-        request.session['order_id'] = order_obj.id
-        return redirect('payment:payment-process')
+            request.session['order_id'] = order_obj.id
+            return redirect('payment:payment-process')
 
     context = {
         'form': order_form
